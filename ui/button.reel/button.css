@@ -14,6 +14,16 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.digit-Button--type-primary {
+    border-color: green;
+    background-color: lightgreen;
+}
+
+.digit-Button--type-secondary {
+    border-color: #ddd;
+    backgorund-color: #f8f8f8;
+}
+
 .digit-Button.montage--active {
     background-color: #e5e5e5;
 }

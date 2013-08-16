@@ -9,6 +9,12 @@ exports.Button = AbstractButton.specialize({
             this.super();
 
             this.classList.add("digit-Button");
+            this.classList.add("digit-Button--type-" + this.type);
+            this.classList.add("digit-Button--size-" + this.size);
         }
-    }
+    },
+
+    type: {value:"normal"},
+    size: {value:"normal"}
+
 });

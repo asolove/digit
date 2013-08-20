@@ -7,14 +7,19 @@ exports.Button = AbstractButton.specialize({
     constructor : {
         value: function Button() {
             this.super();
-
             this.classList.add("digit-Button");
-            this.classList.add("digit-Button--type-" + this.type);
-            this.classList.add("digit-Button--size-" + this.size);
         }
     },
 
-    type: {value:"normal"},
-    size: {value:"normal"}
+    meaning: {value:"normal"},
+    size: {value:"normal"},
+
+    draw: {
+        value: function(firstDraw) {
+            this.super();
+            this.classList.add("digit-Button--meaning-" + this.meaning);
+            this.classList.add("digit-Button--size-" + this.size);
+        }
+    }
 
 });

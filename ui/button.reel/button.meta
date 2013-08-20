@@ -11,16 +11,29 @@
             }
         }
     },
-    "blueprint_button_type": {
+    "meaning_property": {
         "prototype": "montage/core/meta/property-blueprint",
         "properties": {
-            "name": "type"
-            "blueprint": "{
+            "name": "meaning",
+            "blueprint": {
                 "@": "root"
             },
             "valueType": "enum",
             "enumValues": [
                 "normal", "primary", "secondary"
+            ]
+        }
+    },
+    "size_property": {
+        "prototype": "montage/core/meta/property-blueprint",
+        "properties": {
+            "name": "size",
+            "blueprint": {
+                "@": "root"
+            },
+            "valueType": "enum",
+            "enumValues": [
+                "small", "normal", "large"
             ]
         }
     },
@@ -30,6 +43,24 @@
             "name": "Button",
             "parent": {
                 "@": "blueprint_parent"
+            },
+            "propertyBlueprints": [
+                {
+                    "@": "meaning_property"
+                },
+                {
+                    "@": "size_property"
+                }
+            ],
+            "propertyBlueprintGroups": {
+                "Style": [
+                    {
+                        "@": "meaning_property"
+                    },
+                    {
+                        "@": "size_property"
+                    }
+                ]
             },
             "blueprintModule": {
                 "%": "ui/button.reel/button.meta"
